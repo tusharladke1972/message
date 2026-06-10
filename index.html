@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>heyy Cutiee</title>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+
+    body{
+        height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        overflow:hidden;
+        font-family:Arial, sans-serif;
+
+        /* Premium Dark Animated Background */
+        background:linear-gradient(
+            -45deg,
+            #0f172a,
+            #1e293b,
+            #312e81,
+            #1e1b4b
+        );
+        background-size:400% 400%;
+        animation:bgMove 12s ease infinite;
+    }
+
+    .message{
+        font-size:80px;
+        font-weight:bold;
+        text-align:center;
+        text-transform:uppercase;
+        padding:20px;
+
+        /* Very subtle glow */
+        text-shadow:0 0 4px rgba(255,255,255,0.15);
+
+        animation:
+            zoom 3s ease-in-out infinite,
+            colorChange 5s linear infinite,
+            glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes bgMove{
+        0%{
+            background-position:0% 50%;
+        }
+        50%{
+            background-position:100% 50%;
+        }
+        100%{
+            background-position:0% 50%;
+        }
+    }
+
+    @keyframes zoom{
+        0%,100%{
+            transform:scale(1);
+        }
+        50%{
+            transform:scale(1.1);
+        }
+    }
+
+    @keyframes glow{
+        from{
+            text-shadow:0 0 3px rgba(255,255,255,0.1);
+        }
+        to{
+            text-shadow:0 0 6px rgba(255,255,255,0.2);
+        }
+    }
+
+    @keyframes colorChange{
+        0%{
+            color:#ffffff;
+        }
+        25%{
+            color:#60a5fa;
+        }
+        50%{
+            color:#a78bfa;
+        }
+        75%{
+            color:#22d3ee;
+        }
+        100%{
+            color:#ffffff;
+        }
+    }
+
+    @media (max-width:768px){
+        .message{
+            font-size:45px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="message" id="msg">
+    
+</div>
+
+<script>
+    // Change your message here
+    document.getElementById("msg").innerText = "heyy buddie i hope you doing well!! Aaj ch Advance java cha code pathav";
+</script>
+
+</body>
+</html>
