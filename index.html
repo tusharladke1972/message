@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>heyy Cutiee</title>
+<title>Heyy Cutiee</title>
 
 <style>
     *{
@@ -17,10 +17,10 @@
         display:flex;
         justify-content:center;
         align-items:center;
-        overflow:hidden;
+        overflow:auto;
         font-family:Arial, sans-serif;
 
-        /* Premium Dark Animated Background */
+        /* Premium Animated Background */
         background:linear-gradient(
             -45deg,
             #0f172a,
@@ -33,20 +33,23 @@
     }
 
     .message{
-    font-size:50px;      /* reduced from 80px */
-    font-weight:bold;
-    text-align:center;
-    padding:20px;
-    max-width:80%;       /* prevents text from stretching too wide */
-    line-height:1.4;     /* space between lines */
+        font-size:clamp(24px, 5vw, 50px);
+        font-weight:bold;
+        text-align:center;
+        width:90%;
+        max-width:1000px;
+        line-height:1.5;
+        padding:20px;
+        word-wrap:break-word;
 
-    text-shadow:0 0 4px rgba(255,255,255,0.15);
+        /* Subtle glow */
+        text-shadow:0 0 4px rgba(255,255,255,0.15);
 
-    animation:
-        zoom 3s ease-in-out infinite,
-        colorChange 5s linear infinite,
-        glow 2s ease-in-out infinite alternate;
-}
+        animation:
+            zoom 3s ease-in-out infinite,
+            colorChange 5s linear infinite,
+            glow 2s ease-in-out infinite alternate;
+    }
 
     @keyframes bgMove{
         0%{
@@ -65,7 +68,7 @@
             transform:scale(1);
         }
         50%{
-            transform:scale(1.1);
+            transform:scale(1.05);
         }
     }
 
@@ -98,21 +101,22 @@
 
     @media (max-width:768px){
         .message{
-            font-size:45px;
+            width:95%;
+            font-size:24px;
         }
     }
 </style>
 </head>
 <body>
 
-<div class="message" id="msg">
-    
-</div>
+<div class="message" id="msg"></div>
 
 <script>
-    // Change your message here
-    document.getElementById("msg").innerHTML =
-"Heyy Buddie, I hope you are doing well!! <br><br> Aaj cha Advance Java cha code pathav";</script>
+document.getElementById("msg").innerHTML =
+"Heyy Buddie, I hope you are doing well!!<br><br>" +
+"Then hach gosth vr aaj cha Advance Java cha code pathav.<br><br>" +
+"Bhetu udhya mgh.";
+</script>
 
 </body>
 </html>
