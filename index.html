@@ -33,20 +33,20 @@
     }
 
     .message{
-        font-size:80px;
-        font-weight:bold;
-        text-align:center;
-        text-transform:uppercase;
-        padding:20px;
+    font-size:50px;      /* reduced from 80px */
+    font-weight:bold;
+    text-align:center;
+    padding:20px;
+    max-width:80%;       /* prevents text from stretching too wide */
+    line-height:1.4;     /* space between lines */
 
-        /* Very subtle glow */
-        text-shadow:0 0 4px rgba(255,255,255,0.15);
+    text-shadow:0 0 4px rgba(255,255,255,0.15);
 
-        animation:
-            zoom 3s ease-in-out infinite,
-            colorChange 5s linear infinite,
-            glow 2s ease-in-out infinite alternate;
-    }
+    animation:
+        zoom 3s ease-in-out infinite,
+        colorChange 5s linear infinite,
+        glow 2s ease-in-out infinite alternate;
+}
 
     @keyframes bgMove{
         0%{
@@ -111,8 +111,8 @@
 
 <script>
     // Change your message here
-    document.getElementById("msg").innerText = "heyy buddie i hope you doing well!! Aaj ch Advance java cha code pathav";
-</script>
+    document.getElementById("msg").innerHTML =
+"Heyy Buddie, I hope you are doing well!! <br><br> Aaj cha Advance Java cha code pathav";</script>
 
 </body>
 </html>
